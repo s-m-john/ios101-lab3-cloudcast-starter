@@ -36,5 +36,20 @@ class ForecastViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    let fakeData = WeatherForecast(weatherCode: .partlyCloudy,
+                                       temperature: 90.0,
+                                              date: Date())
+        configure(with: fakeData)
+      }
 
+private func configure(with forecast: WeatherForecast) {
+    forecastImageView.image = forecast.weatherCode.image
+    descriptionLabel.text = forecast.weatherCode.description
+    temperatureLabel.text = "\(forecast.temperature)°F"
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "MMMM d, yyyy"
+    dateLabel.text = dateFormatter.string(from: forecast.date)
+  }
 }
+
