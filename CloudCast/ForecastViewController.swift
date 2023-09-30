@@ -8,7 +8,18 @@
 import UIKit
 
 class ForecastViewController: UIViewController {
-
+    @IBOutlet var locationLabel: UIView!
+    
+    @IBOutlet var dateLabel: UIView!
+    
+    
+    @IBOutlet weak var forecastImageView: UIImageView!
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    @IBOutlet weak var temperatureLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
